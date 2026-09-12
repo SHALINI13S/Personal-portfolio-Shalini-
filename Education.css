@@ -1,0 +1,38 @@
+.edu-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 28px;
+  padding: 32px 0;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.edu-year {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--color-brass-dark);
+  font-weight: 600;
+}
+
+.edu-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.edu-college {
+  margin-top: 8px;
+  color: var(--color-ink-soft);
+}
+
+.edu-score {
+  margin-top: 6px;
+  font-weight: 600;
+  color: var(--color-sage);
+}
+
+@media (max-width: 560px) {
+  .edu-card {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
