@@ -1,0 +1,144 @@
+:root {
+  /* ---- Color tokens ---- */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f2f1ec;
+  --color-ink: #1b2430;
+  --color-ink-soft: #4a5464;
+  --color-brass: #b8863b;
+  --color-brass-dark: #96692a;
+  --color-sage: #6b7a63;
+  --color-line: #e2dfd6;
+
+  /* ---- Type tokens ---- */
+  --font-display: "Fraunces", serif;
+  --font-body: "Manrope", sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  margin: 0;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0;
+  color: var(--color-ink-soft);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+section {
+  padding: 96px 0;
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 64px 0;
+  }
+}
+
+.section-heading {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 600;
+  margin-bottom: 40px;
+  max-width: 32ch;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--color-ink);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-brass-dark);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+.btn-secondary:hover {
+  background: var(--color-ink);
+  color: #fff;
+}
